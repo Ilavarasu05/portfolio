@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilavarasu Photography</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <div id="particles-js"></div>
+    <!-- ===== Premium Loader ===== -->
+
+<div id="loader">
+
+    <div class="shutter">
+        <div class="blade blade1"></div>
+        <div class="blade blade2"></div>
+        <div class="blade blade3"></div>
+        <div class="blade blade4"></div>
+        <div class="blade blade5"></div>
+        <div class="blade blade6"></div>
+    </div>
+
+    <h1>ILAVARASU</h1>
+
+    <p>PHOTOGRAPHY</p>
+
+    <div class="loader-text">
+        Capturing Memories...
+    </div>
+
+</div>
+
+    <!-- Navigation Bar -->
+   <nav>
+    <div class="logo">ILAVARASU PHOTOGRAPHY</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+<button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero hidden" id="home">
+
+        <h1>Capture Every Moment</h1>
+
+        <p>Wedding | Portrait | Nature Photography</p>
+
+        <button>View Gallery</button>
+
+    </section>
+    <section class="about hidden" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hi, I'm Ilavarasu. I am passionate about Wedding,
+        Portrait and Nature Photography.
+        Every picture tells a story, and I love capturing those moments.
+    </p>
+
+</section>
+
+<section class="gallery hidden" id="gallery">
+
+    <h2>My Portfolio</h2>
+
+    <p class="gallery-text">
+        Explore my collection of Wedding, Portrait and Nature Photography.
+    </p>
+
+    <div class="gallery-container">
+
+        <div class="card">
+            <img src="images/photo1.jpg"onclick="openImage(this.src)">
+            <h3>Wedding</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/photo2.jpg"onclick="openImage(this.src)">
+            <h3>Portrait</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/photo3.jpg"onclick="openImage(this.src)">
+            <h3>Nature</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/photo4.jpg"onclick="openImage(this.src)">
+            <h3>Cinematic</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/photo5.jpg"onclick="openImage(this.src)">
+            <h3>Events</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/photo6.jpg"onclick="openImage(this.src)">
+            <h3>Travel</h3>
+        </div>
+
+    </div>
+
+</section>
+<!-- Services Section -->
+
+<section class="services hidden">
+
+    <h2>My Services</h2>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <h3>Wedding Photography</h3>
+            <p>Capture every beautiful moment of your special day.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Portrait Photography</h3>
+            <p>Professional indoor and outdoor portrait sessions.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Nature Photography</h3>
+            <p>Beautiful landscapes and wildlife photography.</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= BOOKING SECTION ================= -->
+
+<section class="booking hidden" id="booking">
+
+    <h2>Book Your Shoot</h2>
+
+    <div class="booking-container">
+
+        <!-- Booking Form -->
+
+        <div class="booking-form">
+
+            <form id="bookingForm">
+<input type="tel" name="phone" placeholder="📱 Phone Number" required>
+
+<input type="date" name="date" required>
+
+<input type="hidden" name="time" value="Booking Request">
+
+<select name="event" required>
+                    <option value="">Select Event Type</option>
+                    <option>Wedding Photography</option>
+                    <option>Engagement</option>
+                    <option>Birthday</option>
+                    <option>Baby Shoot</option>
+                    <option>Portrait Shoot</option>
+                    <option>Outdoor Shoot</option>
+                    <option>Cinematic Video</option>
+                </select>
+
+                <textarea 
+name="message" 
+placeholder="Write your requirements..." 
+rows="5"></textarea>
+
+                <button id="bookBtn" type="submit">✨ Book Now</button>
+            </form>
+
+        </div>
+
+        <!-- Booking Image -->
+
+        <div class="booking-image">
+
+            <img id="booking-slider" src="images/booking1.jpg" alt="Booking Image">
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =======================
+     PRICING SECTION
+======================== -->
+
+<section class="pricing" id="pricing">
+
+    <h2>Photography Packages</h2>
+
+    <p>Choose the perfect package for your special moments.</p>
+
+    <div class="pricing-container">
+
+        <!-- BASIC -->
+
+        <div class="price-card">
+
+            <h3>Basic</h3>
+
+            <div class="price">₹9,999</div>
+
+            <ul>
+
+                <li>✅ 4 Hours Coverage</li>
+
+                <li>✅ 100 Edited Photos</li>
+
+                <li>✅ Online Gallery</li>
+
+                <li>✅ HD Images</li>
+
+                <li>❌ Drone Shoot</li>
+
+                <li>❌ Premium Album</li>
+
+            </ul>
+
+            <a href="https://wa.me/919025982253?text=Hi%20Ilavarasu,%20I%20want%20to%20book%20the%20Basic%20Package." target="_blank">
+                <button>Book Now</button>
+            </a>
+
+        </div>
+
+        <!-- PREMIUM -->
+
+        <div class="price-card featured">
+
+            <div class="badge">MOST POPULAR</div>
+
+            <h3>Premium</h3>
+
+            <div class="price">₹24,999</div>
+
+            <ul>
+
+                <li>✅ Full Day Coverage</li>
+
+                <li>✅ 300 Edited Photos</li>
+
+                <li>✅ Cinematic Highlight Video</li>
+
+                <li>✅ Premium Album</li>
+
+                <li>✅ Drone Shoot</li>
+
+                <li>✅ Online Gallery</li>
+
+            </ul>
+
+            <a href="https://wa.me/919025982253?text=Hi%20Ilavarasu,%20I%20want%20to%20book%20the%20Premium%20Package." target="_blank">
+                <button>Book Now</button>
+            </a>
+
+        </div>
+
+        <!-- LUXURY -->
+
+        <div class="price-card">
+
+            <h3>Luxury</h3>
+
+            <div class="price">₹49,999</div>
+
+            <ul>
+
+                <li>✅ 2 Days Coverage</li>
+
+                <li>✅ Unlimited Edited Photos</li>
+
+                <li>✅ Cinematic Wedding Film</li>
+
+                <li>✅ Premium Album</li>
+
+                <li>✅ Drone Coverage</li>
+
+                <li>✅ Premium Frame</li>
+
+            </ul>
+
+            <a href="https://wa.me/919025982253?text=Hi%20Ilavarasu,%20I%20want%20to%20book%20the%20Luxury%20Package." target="_blank">
+                <button>Book Now</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="contact hidden" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+<!-- Footer -->
+
+<footer class="hidden">
+
+    <h2>Ilavarasu Photography</h2>
+
+    <p>Capturing Memories, One Click at a Time.</p>
+
+   <div class="social-icons">
+
+    <a href="https://instagram.com/lovestruck_photographer" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/ilavarasu" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://wa.me/919025982253" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</div>
+
+    <p class="copyright">
+        © 2026 Ilavarasu Photography. All Rights Reserved.
+    </p>
+
+</footer>
+<!-- Lightbox -->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightbox-img">
+
+</div>
+<a href="https://wa.me/919025982253" class="whatsapp" target="_blank">
+    💬
+</a>
+<button id="topBtn" onclick="topFunction()">⬆</button>
+
+emailjs.init({
+    publicKey: "7hSR3jVuW83ojYCoM",
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
